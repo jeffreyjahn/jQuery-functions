@@ -1,0 +1,41 @@
+#wrapper{
+    width: 1024px;
+    background-color: rgba(168, 218, 145, 0.534);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 auto;
+}
+
+    .func{
+        width: 80%;
+        padding: 20px;
+        text-align: left;
+        border-bottom: 1px solid fuchsia;
+        margin: 0 auto;
+    }
+        h1{
+            font-size: 20pt;
+            color: palevioletred;
+            font-weight: bolder;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        button{
+            width: 150px;
+            padding: 5px 0px 5px 0px;
+            background-color: lightpink;
+            border-radius: 10px;
+            color: purple;
+            display: inline-block;
+            vertical-align:top;
+        }
+        p{
+            font-size: 10pt;
+            color: coral;
+            display: inline-block;
+            left: 50px;
+            position: relative;
+            vertical-align:top;
+        }
+        .blue-text{
+            color:blue;
+        }

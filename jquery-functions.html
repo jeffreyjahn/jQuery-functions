@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>How to jQuery</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#click").click(function() {
+                alert("You've clicked this message.");
+            });
+
+            $("#hide").click(function() {
+                $("#hide-text").hide(function(){
+                    console.log("The paragraph is gone.");
+                });
+            });
+
+            $("#show").click(function(){
+                $("#hide-text").show(function(){
+                    console.log("The previous paragraph is back.");
+                });
+            });
+
+            $("#toggle").click(function(){
+                $("#toggle-text").toggle();
+            });
+
+            $("#slide-down").click(function(){
+                $("#slide-down-text").slideDown(function(){
+                    $(this)
+                        .css("border", "2px red inset")
+                });
+            });
+
+            $("#slide-up").click(function(){
+                $("#slide-up-text").slideUp();
+            });
+
+            $("#slide-toggle").click(function(){
+                $("#slide-toggle-text").slideToggle();
+            });
+
+            $("#fade-in").click(function(){
+                $("#fade-in-text").fadeIn(function(){
+                    $(this)
+                        .css("border", "2px red inset")
+                });
+            });
+            
+            $("#fade-out").click(function (){
+                $("#fade-out-text").fadeOut();
+            });
+
+            $("#add-class").click(function () { 
+                $("#add-class-text").addClass("blue-text");
+            });
+
+            $("#before").click(function () { 
+                $("#before-text").before("<h1>Text</h1>");
+            });
+
+            $("#after").click(function () { 
+                $("#after-text").after("<h1>Text</h1>");
+                
+            });
+
+            $("#append").click(function () {
+                $("#append-text").append("<h1>Text</h1>");
+            });
+            
+            $("#html").click(function () { 
+                $("#html-text").html("<p>bblaah</p>");
+            });
+
+            $("#attr").click(function () { 
+                $("#attr-text").attr("class", "blue-text");
+            });
+
+            $("#val").click(function () { 
+                var text = $("#val-text").val();
+                $("#val-text").after("text");
+            });
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" media="screen" href="reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
+    <div id="wrapper">
+        <div class="func">
+            <h1 class="func-head">Click</h1>
+            <button id="click">Click</button>
+            <p id="click-text">Click the button to alert</p>
+        </div>
+        <div class="func">
+            <h1 class="func-head">Hide</h1>
+            <button id="hide">Hide</button>
+            <p id="hide-text">Click the button to hide this paragraph</p>
+        </div>
+        <div class="func">
+            <h1 class="func-head">Show</h1>
+            <button id="show">Show</button>
+            <p id="show-text">Click the button to show the paragraph above</p>
+        </div>
+        <div class="func">
+            <h1 class="func-head">Toggle</h1>
+            <button id="toggle">Toggle</button>
+            <p id="toggle-text">Click the button to toggle paragraph</p>
+        </div>
+        <div class="func">
+            <h1 class="func-head">SlideDown</h1>
+            <button id="slide-down">SlideDown</button>
+            <p id="slide-down-text" display:"none">Click the button to slide down a red box because im lazy.</p>
+        </div>
+        <div class="func">
+            <h1 class="func-head">SlideUp</h1>
+            <button id="slide-up">SlideUp</button>
+            <p id="slide-up-text">Click the button to make this paragraph slide up</p>
+        </div>
+        <div class="func">
+            <h1 class="func-head">SlideToggle</h1>
+            <button id="slide-toggle">SlideToggle</button>
+            <p id="slide-toggle-text">Click the button to slide toggle this paragraph and ghost ride the whip</p>
+        </div>    
+        <div class="func">
+            <h1 class="func-head">FadeIn</h1>
+            <button id="fade-in">FadeIn</button>
+            <p id="fade-in-text">Click the button to fade in this </p>
+        </div>    
+        <div class="func">
+            <h1 class="func-head">FadeOut</h1>
+            <button id="fade-out">FadeOut</button>
+            <p id="fade-out-text">Click the button to fade this paragraph</p>
+        </div>    
+        <div class="func">
+            <h1 class="func-head">AddClass</h1>
+            <button id="add-class">AddClass</button>
+            <p id="add-class-text">Click the button to make this paragraph blue</p>
+        </div>    
+        <div class="func">
+            <h1 class="func-head">Before</h1>
+            <button id="before">Before</button>
+            <p id="before-text">Click the button to add header before</p>
+        </div>    
+        <div class="func">
+            <h1 class="func-head">After</h1>
+            <button id="after">After</button>
+            <p id="after-text">Click the button to add header after</p>
+        </div>    
+        <div class="func">
+            <h1 class="func-head">Append</h1>
+            <button id="append">Append</button>
+            <p id="append-text">Click the button to</p>
+        </div>    
+        <div class="func">
+            <h1 class="func-head">HTML</h1>
+            <button id="html">HTML</button>
+            <p id="html-text">Click the button to</p>
+        </div>    
+        <div class="func">
+            <h1 class="func-head">Attr</h1>
+            <button id="attr">Attr</button>
+            <p id="attr-text">Click the button to</p>
+        </div>    
+        <div class="func">
+            <h1 class="func-head">Val</h1>
+            <button id="val">Val</button>
+            <p id="val-text">Click the button to</p>
+        </div>    
+        <div class="func">
+            <h1 class="func-head">Text</h1>
+            <button id="text">Text</button>
+            <p id="text-text">Click the button to</p>
+        </div>    
+        <div class="func">
+            <h1 class="func-head">Data</h1>
+            <button id="data">Data</button>
+            <p id="data-text">Click the button to</p>
+        </div>
+    </div>
+</body>
+</html>
